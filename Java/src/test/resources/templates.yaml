@@ -1,0 +1,70 @@
+#    SellIn
+#       inc = -1;
+#       min = Integer.MIN_VALUE;
+#       max = Integer.MAX_VALUE;
+#   Quality
+#       inc = -1;
+#       multiplier = 1;
+#       min = 0;
+#       max = 50;
+templates:
+    - name: __ORDINARY_GOODS__
+      rules:
+          - sell-in:
+                min: 0
+          - sell-in:
+                max: 0
+            quality:
+                multiplier: 2
+
+    - name: "Aged Brie"
+      rules:
+          - sell-in:
+                min: 0
+            quality:
+                inc: 1
+          - sell-in:
+                max: 0
+            quality:
+                inc: 1
+                multiplier: 2
+
+    - name: "Sulfuras, Hand of Ragnaros"
+      rules:
+          - sell-in:
+                inc: 0
+            quality:
+                inc: 0
+                min: 80
+                max: 80
+
+    - name: "Backstage passes to a TAFKAL80ETC concert"
+      rules:
+          - sell-in:
+                min: 10
+            quality:
+                inc: 1
+          - sell-in:
+                min: 5
+                max: 10
+            quality:
+                inc: 2
+          - sell-in:
+                min: 0
+                max: 5
+            quality:
+                inc: 3
+          - sell-in:
+                max: 0
+            quality:
+                max: 0
+    - name: "Conjured"
+      rules:
+          - sell-in:
+                min: 0
+            quality:
+                multiplier: 2
+          - sell-in:
+                max: 0
+            quality:
+                multiplier: 4
