@@ -92,7 +92,7 @@ public class Templates {
             rules = map.get(ORDINARY_GOODS);
         }
         if (rules == null) {
-            throw new GildedRoseException("Protocol do not contain '" + item.name + "'");
+            throw new GildedRoseException("Protocol does not contain '" + item.name + "'");
         } else {
             for (Rule rule: rules) {
                 if (rule.update(item)) {
@@ -100,7 +100,7 @@ public class Templates {
                 }
             }
         }
-        throw new GildedRoseException("Protocol do not contain rule of '" + item.name + "' with sellIn=" + item.sellIn);
+        throw new GildedRoseException("Protocol does not contain rule of '" + item.name + "' with sellIn=" + item.sellIn);
     }
 
     public static class GildedRoseException extends Exception {
